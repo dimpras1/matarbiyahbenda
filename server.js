@@ -19,26 +19,35 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Route utama
 app.get("/", (req, res) => {
-  res.render("pages/index", { title: "Landing Page Tailwind + EJS" });
+  res.render("pages/index", { title: "Beranda" }); // Title disesuaikan
 });
+
 app.get("/profil", (req, res) => {
-  res.render("pages/profil", { title: "Profile" });
+  res.render("pages/profil", { title: "Profil" }); // Title disesuaikan
 });
+
 app.get("/kontak", (req, res) => {
-  res.render("pages/kontak", { title: "Contact" });
+  res.render("pages/kontak", { title: "Kontak" }); // Title disesuaikan
 });
-app.get("/informasi", (req, res) => {
-  res.render("pages/informasi", { title: "Information" });
-});
+
 app.get("/galeri", (req, res) => {
-  res.render("pages/galeri", { title: "Gallery" });
+  res.render("pages/galeri", { title: "Galeri" }); // Title disesuaikan
 });
-app.get("/unit-kerja", (req, res) => {
-  res.render("pages/unit-kerja", { title: "Unit Kerja" });
+
+// Rute yang diganti dari "/informasi"
+app.get("/kabar-madrasah", (req, res) => {
+  res.render("pages/kabar-madrasah", { title: "Kabar Madrasah" }); // Sesuaikan nama file view jika perlu
 });
-app.get("/ekstrakurikuler", (req, res) => {
-  res.render("pages/ekstrakurikuler", { title: "Extracurricular" });
+
+// Rute yang ditambahkan (rekomendasi)
+app.get("/fasilitas", (req, res) => {
+  res.render("pages/fasilitas", { title: "Fasilitas" });
 });
+
+app.get("/kegiatan", (req, res) => {
+  res.render("pages/kegiatan", { title: "Kegiatan" });
+});
+
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
