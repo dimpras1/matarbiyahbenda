@@ -19,7 +19,25 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Route utama
 app.get("/", (req, res) => {
-  res.render("index", { title: "Landing Page Tailwind + EJS" });
+  res.render("pages/index", { title: "Landing Page Tailwind + EJS" });
+});
+app.get("/profil", (req, res) => {
+  res.render("pages/profil", { title: "Profile" });
+});
+app.get("/kontak", (req, res) => {
+  res.render("pages/kontak", { title: "Contact" });
+});
+app.get("/informasi", (req, res) => {
+  res.render("pages/informasi", { title: "Information" });
+});
+app.get("/galeri", (req, res) => {
+  res.render("pages/galeri", { title: "Gallery" });
+});
+app.get("/unit-kerja", (req, res) => {
+  res.render("pages/unit-kerja", { title: "Unit Kerja" });
+});
+app.get("/ekstrakurikuler", (req, res) => {
+  res.render("pages/ekstrakurikuler", { title: "Extracurricular" });
 });
 
 app.listen(PORT, () => {
