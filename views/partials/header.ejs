@@ -11,16 +11,23 @@
   <span>07:00 - 14:00 Sabtu - Kamis</span>
 </div>
 </div>
-<nav class="main-nav">
-  <ul class="nav-links">
-      <li><a href="/">Ber</a></li>
-      <li>
-          <a href="/profil">Profil</a>
-          </li>
-      <li><a href="/fasilitas">Fasilitas</a></li>
-      <li><a href="/kegiatan">Kegiatan</a></li>
-      <li><a href="/kabar-madrasah">Kabar Madrasah</a></li>
-      <li><a href="/galeri">Galeri</a></li>
-      <li><a href="/kontak">Kontak</a></li>
-  </ul>
+<nav class="main-nav bg-green-900 p-4"> <ul class="nav-links flex justify-center space-x-8 text-white">
+  <li><a href="/" class="hover:text-yellow-300">Beranda</a></li>
+  
+  <li class="relative group"> <a href="/profil" class="hover:text-yellow-300">Profil</a>
+      
+      <ul class="absolute hidden group-hover:block bg-white text-black mt-2 py-2 rounded-lg shadow-xl">
+          <li><a href="/profil/visi-misi" class="block px-4 py-2 hover:bg-gray-200">Visi & Misi</a></li>
+          <li><a href="/profil/sejarah" class="block px-4 py-2 hover:bg-gray-200">Sejarah</a></li>
+          <li><a href="/profil/struktur-organisasi" class="block px-4 py-2 hover:bg-gray-200">Struktur Organisasi</a></li>
+          <li><a href="/profil/staf-pengajar" class="block px-4 py-2 hover:bg-gray-200">Staf Pengajar</a></li>
+      </ul>
+  </li>
+  
+  <li><a href="/fasilitas" class="hover:text-yellow-300">Fasilitas</a></li>
+  <li><a href="/kegiatan" class="hover:text-yellow-300">Kegiatan</a></li>
+  <li><a href="/kabar-madrasah" class="hover:text-yellow-300">Kabar Madrasah</a></li>
+  <li><a href="/galeri" class="hover:text-yellow-300">Galeri</a></li>
+  <li><a href="/kontak" class="hover:text-yellow-300">Kontak</a></li>
+</ul>
 </nav>
