@@ -16,30 +16,36 @@ app.set("views", path.join(__dirname, "views"));
 // Serve file static (CSS, JS, gambar)
 app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/images", express.static(path.join(__dirname, "images")));
+console.log("📁 Folder gambar:", path.join(__dirname, "images"));
+
+
+app.get("/test", (req, res) => {
+  res.sendFile(path.join(__dirname, "images/beranda/image.png"));
+});
+
 
 // Route utama
 app.get("/", (req, res) => {
-  res.render("pages/index", { title: "Beranda" }); // Title disesuaikan
+  res.render("pages/index", { title: "Beranda" });
 });
 
 app.get("/profil", (req, res) => {
-  res.render("pages/profil", { title: "Profil" }); // Title disesuaikan
+  res.render("pages/profil", { title: "Profil" });
 });
 
 app.get("/kontak", (req, res) => {
-  res.render("pages/kontak", { title: "Kontak" }); // Title disesuaikan
+  res.render("pages/kontak", { title: "Kontak" });
 });
 
 app.get("/galeri", (req, res) => {
-  res.render("pages/galeri", { title: "Galeri" }); // Title disesuaikan
+  res.render("pages/galeri", { title: "Galeri" });
 });
 
-// Rute yang diganti dari "/informasi"
 app.get("/kabar-madrasah", (req, res) => {
-  res.render("pages/kabar-madrasah", { title: "Kabar Madrasah" }); // Sesuaikan nama file view jika perlu
+  res.render("pages/kabar-madrasah", { title: "Kabar Madrasah" });
 });
 
-// Rute yang ditambahkan (rekomendasi)
 app.get("/fasilitas", (req, res) => {
   res.render("pages/fasilitas", { title: "Fasilitas" });
 });
@@ -47,7 +53,9 @@ app.get("/fasilitas", (req, res) => {
 app.get("/kegiatan", (req, res) => {
   res.render("pages/kegiatan", { title: "Kegiatan" });
 });
-
+app.get("/ekstrakurikuler", (req, res) => {
+  res.render("pages/ekstrakurikuler", { title: "Ekstrakurikuler" });
+});
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
