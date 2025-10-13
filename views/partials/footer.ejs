@@ -1,0 +1,111 @@
+<footer class="bg-gray-800 text-gray-300 pt-12 pb-6">
+    <div class="container mx-auto px-6" x-data="footerData()">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            
+            <!-- Halaman Facebook -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Social Media</h3>
+                <!-- Social Media Icons -->
+                <div class="flex gap-4 mt-6">
+                    <a href="#" class="text-gray-300 hover:text-blue-500 transition text-2xl">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-pink-500 transition text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-red-500 transition text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-green-500 transition text-2xl">
+                        <i class="fas fa-music"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tentang Kami -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Tentang Kami</h3>
+                <ul class="space-y-2">
+                    <template x-for="item in tentangKami" :key="item.name">
+                        <li>
+                            <a :href="item.url" class="hover:text-white transition" x-text="item.name"></a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+
+            <!-- Testimoni -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Testimoni</h3>
+                <div class="space-y-4">
+                    <template x-for="testimoni in testimoniList" :key="testimoni.name">
+                        <div class="border-l-4 border-green-500 pl-3">
+                            <p class="text-sm italic mb-2" x-text="testimoni.text"></p>
+                            <p class="text-xs font-semibold text-green-400" x-text="'- ' + testimoni.name"></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Informasi -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Informasi</h3>
+                <div class="space-y-4">
+                    <!-- Alamat -->
+                    <div class="flex gap-3">
+                        <i class="fas fa-map-marker-alt text-green-500 text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Alamat</h4>
+                            <p class="text-sm" x-text="informasi.alamat"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Jam Pelayanan -->
+                    <div class="flex gap-3">
+                        <i class="far fa-clock text-green-500 text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Jam Pelayanan</h4>
+                            <p class="text-sm" x-text="informasi.jamBuka"></p>
+                            <p class="text-sm" x-text="informasi.hariLibur"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-sm">&copy; <span x-text="currentYear"></span> Madrasah Hebat Bermartabat. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function footerData() {
+        return {
+            currentYear: new Date().getFullYear(),
+            tentangKami: [
+                { name: 'Sejarah', url: '#sejarah' },
+                { name: 'Visi & Misi', url: '#visi-misi' },
+                { name: 'Prestasi', url: '#prestasi' },
+                { name: 'Guru & Karyawan', url: '#guru-karyawan' }
+            ],
+            testimoniList: [
+                {
+                    name: 'Aska Nafius',
+                    text: 'Disini saya ditempa dengan ilmu agama yang baik, serta pengalaman berorganisasi yang luas.'
+                },
+                {
+                    name: 'Afaf Muniroh Atid',
+                    text: 'dengan bekal ilmu dan doa para guru madrasah, saya dapat menyelesaikan studi di UNDIP.'
+                }
+            ],
+            informasi: {
+                alamat: 'Jalan Pahlawan No. 43 Rembang Jateng',
+                jamBuka: 'Sabtu - Kamis 07:00-14:00',
+                hariLibur: 'Jumat: Libur'
+            }
+        }
+    }
+</script>
