@@ -7,7 +7,167 @@
     <%- include('../partials/header') %>
 
     <main class="flex-grow">
-      <!-- Hero Slider Section -->
+        <div class="bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+              <h1 class="text-4xl md:text-5xl font-bold mb-4">Galeri Kegiatan</h1>
+              <p class="text-lg md:text-xl text-green-100">Dokumentasi Momen Berharga Kami</p>
+            </div>
+          </div>
+      
+          <!-- Gallery Section -->
+          <div class="container mx-auto px-4 py-16" x-data="{
+            selectedCategory: 'semua',
+            selectedImage: null,
+            images: [
+              { src: '/images/galeri/band.jpg', category: 'seni', title: 'Pertunjukan Band' },
+              { src: '/images/galeri/foto-apelpagi.jpg', category: 'kegiatan', title: 'Apel Pagi' },
+              { src: '/images/galeri/foto-futsal-classmeeeting.jpg', category: 'olahraga', title: 'Futsal Class Meeting' },
+              { src: '/images/galeri/foto-perpisahan-4.jpg', category: 'acara', title: 'Perpisahan 4' },
+              { src: '/images/galeri/foto-perpisahan.jpg', category: 'acara', title: 'Perpisahan' },
+              { src: '/images/galeri/foto-perpisahan2.jpg', category: 'acara', title: 'Perpisahan 2' },
+              { src: '/images/galeri/foto-perpisahan3.jpg', category: 'acara', title: 'Perpisahan 3' },
+              { src: '/images/galeri/foto-sholawatan.jpg', category: 'keagamaan', title: 'Sholawatan' },
+              { src: '/images/galeri/foto-sholawatan2.jpg', category: 'keagamaan', title: 'Sholawatan 2' },
+              { src: '/images/galeri/foto-sholawatan3.jpg', category: 'keagamaan', title: 'Sholawatan 3' },
+              { src: '/images/galeri/foto-sholawatan4.jpg', category: 'keagamaan', title: 'Sholawatan 4' },
+              { src: '/images/galeri/foto-silat.jpg', category: 'olahraga', title: 'Pencak Silat' },
+              { src: '/images/galeri/foto-silat2.jpg', category: 'olahraga', title: 'Pencak Silat 2' },
+              { src: '/images/galeri/happy-teacher.jpg', category: 'kegiatan', title: 'Happy Teacher' },
+              { src: '/images/galeri/pramuka1.jpg', category: 'ekstrakurikuler', title: 'Pramuka 1' },
+              { src: '/images/galeri/pramuka2.jpg', category: 'ekstrakurikuler', title: 'Pramuka 2' },
+              { src: '/images/galeri/tari1.jpg', category: 'seni', title: 'Tarian Tradisional' },
+              { src: '/images/galeri/tari2.jpg', category: 'seni', title: 'Tarian Tradisional 2' }
+            ],
+            get filteredImages() {
+              if (this.selectedCategory === 'semua') {
+                return this.images;
+              }
+              return this.images.filter(img => img.category === this.selectedCategory);
+            }
+          }">
+            
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+              <button 
+                @click="selectedCategory = 'semua'"
+                :class="selectedCategory === 'semua' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Semua
+              </button>
+              <button 
+                @click="selectedCategory = 'kegiatan'"
+                :class="selectedCategory === 'kegiatan' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Kegiatan
+              </button>
+              <button 
+                @click="selectedCategory = 'seni'"
+                :class="selectedCategory === 'seni' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Seni & Budaya
+              </button>
+              <button 
+                @click="selectedCategory = 'olahraga'"
+                :class="selectedCategory === 'olahraga' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Olahraga
+              </button>
+              <button 
+                @click="selectedCategory = 'keagamaan'"
+                :class="selectedCategory === 'keagamaan' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Keagamaan
+              </button>
+              <button 
+                @click="selectedCategory = 'acara'"
+                :class="selectedCategory === 'acara' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Acara Khusus
+              </button>
+              <button 
+                @click="selectedCategory = 'ekstrakurikuler'"
+                :class="selectedCategory === 'ekstrakurikuler' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-green-50'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Ekstrakurikuler
+              </button>
+            </div>
+      
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <template x-for="(image, index) in filteredImages" :key="index">
+                <div 
+                  @click="selectedImage = image"
+                  class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white transform hover:-translate-y-2"
+                  x-show="true"
+                  x-transition:enter="transition ease-out duration-300 delay-100ms"
+                  x-transition:enter-start="opacity-0 scale-95"
+                  x-transition:enter-end="opacity-100 scale-100">
+                  
+                  <div class="aspect-square overflow-hidden">
+                    <img 
+                      :src="image.src" 
+                      :alt="image.title"
+                      class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy">
+                  </div>
+                  
+                  <!-- Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 class="font-bold text-lg mb-1" x-text="image.title"></h3>
+                      <p class="text-sm text-green-200 capitalize" x-text="image.category"></p>
+                    </div>
+                  </div>
+                  
+                  <!-- Green accent border -->
+                  <div class="absolute inset-0 border-4 border-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+                </div>
+              </template>
+            </div>
+      
+            <!-- Lightbox Modal -->
+            <div 
+              x-show="selectedImage !== null"
+              x-cloak
+              @click.self="selectedImage = null"
+              class="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-200"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0">
+              
+              <div class="relative max-w-6xl w-full">
+                <!-- Close Button -->
+                <button 
+                  @click="selectedImage = null"
+                  class="absolute -top-12 right-0 text-white hover:text-green-400 transition-colors duration-300">
+                  <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+                
+                <!-- Image -->
+                <div 
+                  class="bg-white rounded-2xl overflow-hidden shadow-2xl"
+                  x-show="selectedImage"
+                  x-transition:enter="transition ease-out duration-300 delay-75ms"
+                  x-transition:enter-start="opacity-0 scale-95"
+                  x-transition:enter-end="opacity-100 scale-100">
+                  <img 
+                    :src="selectedImage?.src" 
+                    :alt="selectedImage?.title"
+                    class="w-full h-auto max-h-[80vh] object-contain">
+                  <div class="p-6 bg-gradient-to-r from-green-600 to-green-700">
+                    <h3 class="text-2xl font-bold text-white mb-2" x-text="selectedImage?.title"></h3>
+                    <p class="text-green-100 capitalize" x-text="selectedImage?.category"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
     </main>
     <%- include('../partials/footer') %>
   </body>

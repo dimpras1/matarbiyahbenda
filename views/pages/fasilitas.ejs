@@ -7,8 +7,95 @@
     <%- include('../partials/header') %>
 
     <main class="flex-grow">
-      <!-- Hero Slider Section -->
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Fasilitas Sekolah</h1>
+          <p class="text-lg md:text-xl text-blue-100">Berbagai fasilitas lengkap untuk menunjang kegiatan belajar mengajar</p>
+        </div>
+      </section>
+
+      <!-- Facilities Grid Section -->
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div 
+            x-data="{
+              facilities: [
+                {
+                  id: 1,
+                  name: 'Lab Komputer',
+                  image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80',
+                  description: 'Laboratorium komputer dengan perangkat modern'
+                },
+                {
+                  id: 2,
+                  name: 'Lapangan Futsal',
+                  image: 'https://images.unsplash.com/photo-1589487391730-58f20eb2c308?w=800&q=80',
+                  description: 'Lapangan futsal untuk kegiatan olahraga'
+                },
+                {
+                  id: 3,
+                  name: 'Masjid',
+                  image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80',
+                  description: 'Masjid untuk kegiatan ibadah siswa'
+                }
+              ]
+            }"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <template x-for="facility in facilities" :key="facility.id">
+              <div 
+                class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
+                x-data="{ imageError: false }"
+              >
+                <!-- Gambar Fasilitas -->
+                <div class="relative h-64 bg-gray-200 overflow-hidden">
+                  <img 
+                    :src="facility.image" 
+                    :alt="facility.name"
+                    class="w-full h-full object-cover"
+                    x-show="!imageError"
+                    @error="imageError = true"
+                  >
+                  <!-- Fallback jika gambar gagal load -->
+                  <div 
+                    x-show="imageError" 
+                    class="absolute inset-0 flex items-center justify-center bg-gray-300"
+                  >
+                    <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                
+                <!-- Nama Fasilitas -->
+                <div class="p-6">
+                  <h3 
+                    class="text-xl font-bold text-gray-800 mb-2" 
+                    x-text="facility.name"
+                  ></h3>
+                  <p 
+                    class="text-gray-600 text-sm" 
+                    x-text="facility.description"
+                  ></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Fasilitas Terbaik untuk Pendidikan Berkualitas</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Kami menyediakan berbagai fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang efektif dan pengembangan potensi siswa secara maksimal.
+          </p>
+        </div>
+      </section>
     </main>
+    
     <%- include('../partials/footer') %>
   </body>
 </html>
