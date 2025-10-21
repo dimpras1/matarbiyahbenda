@@ -139,9 +139,9 @@ app.get("/ekstrakurikuler", (req, res) => {
   res.render("pages/ekstrakurikuler", { title: "Ekstrakurikuler" });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running at http://localhost:${PORT}`);
+// });
 
 // TAMBAHKAN INI DI AKHIR FILE
-// export default app;
+export default app;
