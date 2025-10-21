@@ -3,49 +3,83 @@
   <head>
     <%- include('../partials/head') %>
   </head>
-  <body class="bg-gray-100 min-h-screen flex flex-col">
+  <body class="bg-gray-50 min-h-screen flex flex-col">
     <%- include('../partials/header') %>
 
     <main class="flex-grow">
-      <!-- Hero Section -->
-      <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
-        <div class="container mx-auto px-4 text-center flex items-center justify-center flex-col md:flex-row md:space-x-8">
-          <div class="max-w-50">
-            <img class="w-full" src="/images/beranda/logo.png" alt="">
-          </div>
-          <div class="">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fasilitas dan Kegiatan</h1>
-            <p class="text-lg md:text-xl text-blue-100">Berbagai fasilitas lengkap dan kegiatan untuk menunjang pembelajaran</p>
-
+      <!-- Hero Section - Improved -->
+      <section class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white py-16 md:py-20 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="flex items-center justify-center flex-col md:flex-row gap-8 md:gap-12 max-w-5xl mx-auto">
+            <!-- Logo -->
+            <div class="flex-shrink-0" x-data="{ show: false }" x-intersect="show = true">
+              <div class="w-32 h-32 md:w-40 md:h-40 bg-white/10 backdrop-blur-sm rounded-3xl p-4 shadow-2xl transform transition-all duration-700"
+                   :class="show ? 'scale-100 rotate-0' : 'scale-0 rotate-180'">
+                <img class="w-full h-full object-contain drop-shadow-2xl" src="/images/beranda/logo.png" alt="Logo MA Tarbiyah">
+              </div>
+            </div>
+            
+            <!-- Text Content -->
+            <div class="text-center md:text-left" x-data="{ show: false }" x-intersect="show = true">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-200"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0">
+                Fasilitas & Kegiatan
+              </h1>
+              <p class="text-lg md:text-xl text-green-100 leading-relaxed"
+                 x-show="show"
+                 x-transition:enter="transition ease-out duration-700 delay-400"
+                 x-transition:enter-start="opacity-0 translate-y-10"
+                 x-transition:enter-end="opacity-100 translate-y-0">
+                Berbagai fasilitas lengkap dan kegiatan untuk menunjang pembelajaran
+              </p>
+              <div class="mt-6 h-1 w-24 bg-white/50 mx-auto md:mx-0 rounded-full"
+                   x-show="show"
+                   x-transition:enter="transition ease-out duration-700 delay-600"
+                   x-transition:enter-start="opacity-0 scale-x-0"
+                   x-transition:enter-end="opacity-100 scale-x-100"></div>
+            </div>
           </div>
         </div>
       </section>
 
       <div x-data="{ activeTab: 'fasilitas' }">
-        <!-- Tab Navigation -->
-        <section class="bg-white shadow-md">
+        <!-- Tab Navigation - Improved -->
+        <section class="bg-white shadow-lg sticky top-0 z-40">
           <div class="container mx-auto px-4">
-            <div class="flex justify-center border-b">
+            <div class="flex justify-center gap-2 py-2">
               <button 
                 @click="activeTab = 'fasilitas'"
-                :class="activeTab === 'fasilitas' ? 'border-green-600 text-green-600' : 'border-transparent text-gray-600 hover:text-gray-800'"
-                class="px-8 py-4 font-semibold border-b-2 transition-colors"
+                :class="activeTab === 'fasilitas' ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+                class="px-8 py-4 font-bold rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
-                Fasilitas
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+                <span>Fasilitas</span>
               </button>
               <button 
                 @click="activeTab = 'kegiatan'"
-                :class="activeTab === 'kegiatan' ? 'border-green-600 text-green-600' : 'border-transparent text-gray-600 hover:text-gray-800'"
-                class="px-8 py-4 font-semibold border-b-2 transition-colors"
+                :class="activeTab === 'kegiatan' ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+                class="px-8 py-4 font-bold rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
-                Kegiatan
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Kegiatan</span>
               </button>
             </div>
           </div>
         </section>
 
         <!-- Content Section -->
-        <section class="py-16">
+        <section class="py-16 md:py-20">
           <div class="container mx-auto px-4">
             <div 
               x-data="{
@@ -54,37 +88,43 @@
                   id: 1,
                   name: 'Lab Komputer',
                   image: '/images/fasilitas/lab.jpg',
-                  description: 'Laboratorium komputer dengan perangkat modern'
+                  description: 'Laboratorium komputer dengan perangkat modern untuk pembelajaran teknologi informasi',
+                  icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
                 },
                 {
                   id: 2,
                   name: 'Lapangan Futsal',
                   image: '/images/fasilitas/lapangan-futsal.jpg',
-                  description: 'Lapangan futsal untuk kegiatan olahraga'
+                  description: 'Lapangan futsal standar untuk kegiatan olahraga dan kompetisi',
+                  icon: 'M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'
                 },
                 {
                   id: 3,
                   name: 'Masjid',
                   image: '/images/fasilitas/masjid.jpg',
-                  description: 'Masjid untuk kegiatan ibadah siswa'
+                  description: 'Masjid nyaman untuk kegiatan ibadah dan kajian keagamaan siswa',
+                  icon: 'M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z'
                 },
                 {
                   id: 4,
                   name: 'Lab IPA',
                   image: '/images/fasilitas/lab-ipa.jpg',
-                  description: 'Laboratorium IPA untuk praktikum siswa'
+                  description: 'Laboratorium IPA lengkap untuk praktikum fisika, kimia, dan biologi',
+                  icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
                 },
                 {
                   id: 5,
                   name: 'Perpustakaan',
                   image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80',
-                  description: 'Perpustakaan dengan koleksi buku lengkap'
+                  description: 'Perpustakaan dengan koleksi buku lengkap dan ruang baca yang nyaman',
+                  icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
                 },
                 {
                   id: 6,
                   name: 'Ruang Kelas',
                   image: '/images/fasilitas/kelas.jpg',
-                  description: 'Ruang kelas yang nyaman dan modern'
+                  description: 'Ruang kelas yang nyaman, modern, dan dilengkapi AC untuk pembelajaran optimal',
+                  icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
                 }
               ],
               activities: [
@@ -92,120 +132,172 @@
                   id: 1,
                   name: 'Pramuka',
                   image: '/images/galeri/pramuka3.jpg',
-                  description: 'Kegiatan kepramukaan untuk melatih kedisiplinan'
+                  description: 'Kegiatan kepramukaan untuk melatih kedisiplinan dan jiwa kepemimpinan',
+                  icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
                 },
                 {
                   id: 2,
                   name: 'Olahraga',
                   image: '/images/fasilitas/lapangan.jpg',
-                  description: 'Berbagai kegiatan olahraga untuk kesehatan'
+                  description: 'Berbagai kegiatan olahraga untuk menjaga kesehatan dan kebugaran siswa',
+                  icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
                 },
                 {
                   id: 3,
                   name: 'Seni dan Budaya',
                   image: '/images/galeri/tari1.jpg',
-                  description: 'Kegiatan seni untuk mengembangkan kreativitas'
+                  description: 'Kegiatan seni untuk mengembangkan kreativitas dan apresiasi budaya',
+                  icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z'
                 },
                 {
                   id: 4,
                   name: 'Keagamaan',
                   image: '/images/galeri/foto-sholawatan.jpg',
-                  description: 'Kegiatan keagamaan untuk menumbuhkan iman'
+                  description: 'Kegiatan keagamaan untuk menumbuhkan iman dan taqwa kepada Allah SWT',
+                  icon: 'M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z'
                 },
                 {
                   id: 5,
                   name: 'Upacara Bendera',
                   image: '/images/galeri/foto-apelpagi.jpg',
-                  description: 'Upacara bendera setiap hari Senin'
+                  description: 'Upacara bendera setiap hari Senin untuk menumbuhkan jiwa nasionalisme',
+                  icon: 'M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9'
                 },
                 {
                   id: 6,
                   name: 'Ekstrakurikuler',
                   image: '/images/galeri/band.jpg',
-                  description: 'Berbagai pilihan ekstrakurikuler'
+                  description: 'Berbagai pilihan ekstrakurikuler untuk mengembangkan minat dan bakat',
+                  icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'
                 }
               ]
             }"
           >
             <!-- Fasilitas Grid -->
-            <div x-show="activeTab === 'fasilitas'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <template x-for="facility in facilities" :key="facility.id">
+            <div x-show="activeTab === 'fasilitas'" 
+                 x-transition:enter="transition ease-out duration-500"
+                 x-transition:enter-start="opacity-0 scale-95"
+                 x-transition:enter-end="opacity-100 scale-100"
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <template x-for="(facility, index) in facilities" :key="facility.id">
                 <div 
-                  class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
+                  class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
                   x-data="{ imageError: false }"
                 >
-                  <!-- Gambar Fasilitas -->
-                  <div class="relative h-64 bg-gray-200 overflow-hidden">
+                  <!-- Image Container with Overlay -->
+                  <div class="relative h-56 md:h-64 bg-gradient-to-br from-green-100 to-emerald-100 overflow-hidden">
                     <img 
                       :src="facility.image" 
                       :alt="facility.name"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                       x-show="!imageError"
                       @error="imageError = true"
                     >
-                    <!-- Fallback jika gambar gagal load -->
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Icon Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="facility.icon"></path>
+                      </svg>
+                    </div>
+                    
+                    <!-- Fallback -->
                     <div 
                       x-show="imageError" 
-                      class="absolute inset-0 flex items-center justify-center bg-gray-300"
+                      class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-200 to-emerald-200"
                     >
-                      <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-20 h-20 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
                     </div>
                   </div>
                   
-                  <!-- Nama Fasilitas -->
+                  <!-- Content -->
                   <div class="p-6">
-                    <h3 
-                      class="text-xl font-bold text-gray-800 mb-2" 
-                      x-text="facility.name"
-                    ></h3>
+                    <div class="flex items-center mb-3">
+                      <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 shadow-md">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="facility.icon"></path>
+                        </svg>
+                      </div>
+                      <h3 
+                        class="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors" 
+                        x-text="facility.name"
+                      ></h3>
+                    </div>
                     <p 
-                      class="text-gray-600 text-sm" 
+                      class="text-gray-600 leading-relaxed" 
                       x-text="facility.description"
                     ></p>
+                    <!-- Decorative Line -->
+                    <div class="mt-4 h-1 w-0 group-hover:w-full bg-gradient-to-r from-green-600 to-emerald-600 rounded-full transition-all duration-500"></div>
                   </div>
                 </div>
               </template>
             </div>
 
             <!-- Kegiatan Grid -->
-            <div x-show="activeTab === 'kegiatan'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <template x-for="activity in activities" :key="activity.id">
+            <div x-show="activeTab === 'kegiatan'"
+                 x-transition:enter="transition ease-out duration-500"
+                 x-transition:enter-start="opacity-0 scale-95"
+                 x-transition:enter-end="opacity-100 scale-100"
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <template x-for="(activity, index) in activities" :key="activity.id">
                 <div 
-                  class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
+                  class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
                   x-data="{ imageError: false }"
                 >
-                  <!-- Gambar Kegiatan -->
-                  <div class="relative h-64 bg-gray-200 overflow-hidden">
+                  <!-- Image Container with Overlay -->
+                  <div class="relative h-56 md:h-64 bg-gradient-to-br from-green-100 to-emerald-100 overflow-hidden">
                     <img 
                       :src="activity.image" 
                       :alt="activity.name"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                       x-show="!imageError"
                       @error="imageError = true"
                     >
-                    <!-- Fallback jika gambar gagal load -->
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Icon Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="activity.icon"></path>
+                      </svg>
+                    </div>
+                    
+                    <!-- Fallback -->
                     <div 
                       x-show="imageError" 
-                      class="absolute inset-0 flex items-center justify-center bg-gray-300"
+                      class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-200 to-emerald-200"
                     >
-                      <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-20 h-20 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
                     </div>
                   </div>
                   
-                  <!-- Nama Kegiatan -->
+                  <!-- Content -->
                   <div class="p-6">
-                    <h3 
-                      class="text-xl font-bold text-gray-800 mb-2" 
-                      x-text="activity.name"
-                    ></h3>
+                    <div class="flex items-center mb-3">
+                      <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 shadow-md">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="activity.icon"></path>
+                        </svg>
+                      </div>
+                      <h3 
+                        class="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors" 
+                        x-text="activity.name"
+                      ></h3>
+                    </div>
                     <p 
-                      class="text-gray-600 text-sm" 
+                      class="text-gray-600 leading-relaxed" 
                       x-text="activity.description"
                     ></p>
+                    <!-- Decorative Line -->
+                    <div class="mt-4 h-1 w-0 group-hover:w-full bg-gradient-to-r from-green-600 to-emerald-600 rounded-full transition-all duration-500"></div>
                   </div>
                 </div>
               </template>
@@ -214,13 +306,55 @@
         </section>
       </div>
 
-      <!-- Additional Info Section -->
-      <section class="bg-white py-12">
-        <div class="container mx-auto px-4 text-center">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">Fasilitas Terbaik dan Kegiatan Beragam</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Kami menyediakan berbagai fasilitas lengkap dan modern serta kegiatan yang beragam untuk mendukung proses pembelajaran yang efektif dan pengembangan potensi siswa secara maksimal.
-          </p>
+      <!-- Additional Info Section - Improved -->
+      <section class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 py-16 md:py-20 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10" x-data="{ show: false }" x-intersect="show = true">
+          <div class="max-w-3xl mx-auto">
+            <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl"
+                 x-show="show"
+                 x-transition:enter="transition ease-out duration-700"
+                 x-transition:enter-start="opacity-0 scale-0 rotate-180"
+                 x-transition:enter-end="opacity-100 scale-100 rotate-0">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6"
+                x-show="show"
+                x-transition:enter="transition ease-out duration-700 delay-200"
+                x-transition:enter-start="opacity-0 translate-y-10"
+                x-transition:enter-end="opacity-100 translate-y-0">
+              Fasilitas Terbaik dan Kegiatan Beragam
+            </h2>
+            
+            <p class="text-lg md:text-xl text-green-100 leading-relaxed"
+               x-show="show"
+               x-transition:enter="transition ease-out duration-700 delay-400"
+               x-transition:enter-start="opacity-0 translate-y-10"
+               x-transition:enter-end="opacity-100 translate-y-0">
+              Kami menyediakan berbagai fasilitas lengkap dan modern serta kegiatan yang beragam untuk mendukung proses pembelajaran yang efektif dan pengembangan potensi siswa secara maksimal.
+            </p>
+            
+            <div class="flex justify-center gap-4 mt-8"
+                 x-show="show"
+                 x-transition:enter="transition ease-out duration-700 delay-600"
+                 x-transition:enter-start="opacity-0 translate-y-10"
+                 x-transition:enter-end="opacity-100 translate-y-0">
+              <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
+                <span class="text-2xl font-bold text-white">6</span>
+                <p class="text-sm text-green-100">Fasilitas</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
+                <span class="text-2xl font-bold text-white">6</span>
+                <p class="text-sm text-green-100">Kegiatan</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
