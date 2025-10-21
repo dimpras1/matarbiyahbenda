@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+  <head>
     <%- include('../partials/head') %>
     <!-- Menggunakan CDN untuk Alpine.js dan Tailwind CSS untuk memastikan fungsionalitas -->
- 
 
     <!-- Penambahan untuk Smooth Scroll -->
     <style>
@@ -11,110 +10,219 @@
         scroll-behavior: smooth;
       }
     </style>
-</head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
     <%- include('../partials/header') %>
-     
+
     <main class="flex-grow">
       <!-- Hero Section dengan Navigasi Cepat -->
-      <section class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white py-12 md:py-16">
-        <div class="container mx-auto px-4 flex items-center justify-center flex-col md:flex-row md:space-x-8">
+      <section
+        class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white py-12 md:py-16"
+      >
+        <div
+          class="container mx-auto px-4 flex items-center justify-center flex-col md:flex-row md:space-x-8"
+        >
           <div class="max-w-50">
-            <img src="/images/beranda/logo.png" alt="">
+            <img src="/images/beranda/logo.png" alt="" />
           </div>
           <div class="">
-            <div class="max-w-4xl mx-auto ">
-              <h1 class="text-4xl md:text-5xl font-bold mb-4">Profil Madrasah</h1>
+            <div class="max-w-4xl mx-auto">
+              <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Profil Madrasah
+              </h1>
               <p class="text-lg md:text-xl text-green-100 mb-6">
                 Mengenal lebih dalam tentang MA Tarbiyah Islamiyah
               </p>
               <!-- Navigasi Cepat -->
               <div class="flex flex-wrap justify-center gap-3 mt-8">
-                <a href="#visi-misi" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Visi & Misi</a>
-                <a href="#sejarah" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Sejarah</a>
-                <a href="#struktur-organisasi" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Struktur Organisasi</a>
-                <a href="#kepala-madrasah" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Pimpinan</a>
-                <a href="#staf-pengajar" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Staf Pengajar</a>
-                <a href="#raihan-prestasi" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Prestasi</a>
+                <a
+                  href="#visi-misi"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Visi & Misi</a
+                >
+                <a
+                  href="#sejarah"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Sejarah</a
+                >
+                <a
+                  href="#struktur-organisasi"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Struktur Organisasi</a
+                >
+                <a
+                  href="#kepala-madrasah"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Pimpinan</a
+                >
+                <a
+                  href="#staf-pengajar"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Staf Pengajar</a
+                >
+                <a
+                  href="#raihan-prestasi"
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                  >Prestasi</a
+                >
               </div>
-          </div>
-          
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 1. Visi Misi -->
-      <section id="visi-misi" class="py-16 md:py-20 bg-white relative overflow-hidden">
+      <section
+        id="visi-misi"
+        class="py-16 md:py-20 bg-white relative overflow-hidden"
+      >
         <!-- Elemen Dekoratif -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full -mr-32 -mt-32 opacity-50"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100 rounded-full -ml-48 -mb-48 opacity-30"></div>
-        
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full -mr-32 -mt-32 opacity-50"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100 rounded-full -ml-48 -mb-48 opacity-30"
+        ></div>
+
         <div class="container mx-auto px-4 max-w-6xl relative z-10">
-          <div class="text-center mb-12" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-12"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Visi & Misi
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
           </div>
-          
-          <div class="grid md:grid-cols-2 gap-8" x-data="{ show: false }" x-intersect="show = true">
+
+          <div
+            class="grid md:grid-cols-2 gap-8"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
             <!-- Kartu Visi -->
-            <div class="group bg-gradient-to-br from-green-50 to-white rounded-3xl shadow-lg p-8 border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700"
-                 x-transition:enter-start="opacity-0 -translate-x-20"
-                 x-transition:enter-end="opacity-100 translate-x-0">
+            <div
+              class="group bg-gradient-to-br from-green-50 to-white rounded-3xl shadow-lg p-8 border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 -translate-x-20"
+              x-transition:enter-end="opacity-100 translate-x-0"
+            >
               <div class="flex items-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    ></path>
                   </svg>
                 </div>
                 <h3 class="text-3xl font-bold text-green-800">Visi</h3>
               </div>
               <p class="text-gray-700 leading-relaxed text-lg">
-                Menjadi madrasah yang terpercaya dalam membangun sumber daya manusia, unggul pada bidang keilmuan, peka terhadap masalah sosial, ekonomi dan apresiatif akan nilai-nilai ke Islaman yang berakhlakul karimah dan perkembangan budaya.
+                Menjadi madrasah yang terpercaya dalam membangun sumber daya
+                manusia, unggul pada bidang keilmuan, peka terhadap masalah
+                sosial, ekonomi dan apresiatif akan nilai-nilai ke Islaman yang
+                berakhlakul karimah dan perkembangan budaya.
               </p>
-              <div class="mt-6 h-1 w-full bg-gradient-to-r from-green-600 to-transparent rounded-full"></div>
+              <div
+                class="mt-6 h-1 w-full bg-gradient-to-r from-green-600 to-transparent rounded-full"
+              ></div>
             </div>
 
             <!-- Kartu Misi -->
-            <div class="group bg-gradient-to-br from-emerald-50 to-white rounded-3xl shadow-lg p-8 border border-emerald-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700 delay-200"
-                 x-transition:enter-start="opacity-0 translate-x-20"
-                 x-transition:enter-end="opacity-100 translate-x-0">
+            <div
+              class="group bg-gradient-to-br from-emerald-50 to-white rounded-3xl shadow-lg p-8 border border-emerald-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 translate-x-20"
+              x-transition:enter-end="opacity-100 translate-x-0"
+            >
               <div class="flex items-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
                   </svg>
                 </div>
                 <h3 class="text-3xl font-bold text-green-800">Misi</h3>
               </div>
               <ul class="space-y-4">
                 <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors">
-                    <span class="w-2.5 h-2.5 bg-emerald-600 rounded-full"></span>
+                  <div
+                    class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 bg-emerald-600 rounded-full"
+                    ></span>
                   </div>
-                  <span class="text-gray-700 leading-relaxed">Menyelenggarakan pendidikan dan pengajaran yang dinamis dan inovatif dengan pola manajemen berbasis sekolah yang positif serta mengambil nilai-nilai baru yang konstruktif</span>
+                  <span class="text-gray-700 leading-relaxed"
+                    >Menyelenggarakan pendidikan dan pengajaran yang dinamis dan
+                    inovatif dengan pola manajemen berbasis sekolah yang positif
+                    serta mengambil nilai-nilai baru yang konstruktif</span
+                  >
                 </li>
                 <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors">
-                    <span class="w-2.5 h-2.5 bg-emerald-600 rounded-full"></span>
+                  <div
+                    class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 bg-emerald-600 rounded-full"
+                    ></span>
                   </div>
-                  <span class="text-gray-700 leading-relaxed">Mengembangkan materi dan sistem pendidikan yang menyeluruh, berkesinambungan, relevan dengan kebutuhan masyarakat dan dunia global</span>
+                  <span class="text-gray-700 leading-relaxed"
+                    >Mengembangkan materi dan sistem pendidikan yang menyeluruh,
+                    berkesinambungan, relevan dengan kebutuhan masyarakat dan
+                    dunia global</span
+                  >
                 </li>
                 <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors">
-                    <span class="w-2.5 h-2.5 bg-emerald-600 rounded-full"></span>
+                  <div
+                    class="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover/item:bg-emerald-200 transition-colors"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 bg-emerald-600 rounded-full"
+                    ></span>
                   </div>
-                  <span class="text-gray-700 leading-relaxed">Meningkatkan proses pembelajaran yang mampu membangkitkan potensi, kreasi dan kompetensi</span>
+                  <span class="text-gray-700 leading-relaxed"
+                    >Meningkatkan proses pembelajaran yang mampu membangkitkan
+                    potensi, kreasi dan kompetensi</span
+                  >
                 </li>
               </ul>
             </div>
@@ -123,86 +231,145 @@
       </section>
 
       <!-- 2. Sejarah -->
-      <section id="sejarah" class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-green-50">
+      <section
+        id="sejarah"
+        class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-green-50"
+      >
         <div class="container mx-auto px-4 max-w-6xl">
-          <div class="text-center mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-16"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Sejarah MA Tarbiyah
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4 text-lg">Perjalanan panjang dalam mendidik generasi berakhlak mulia</p>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
+            <p class="text-gray-600 mt-4 text-lg">
+              Perjalanan panjang dalam mendidik generasi berakhlak mulia
+            </p>
           </div>
-          
+
           <div class="relative">
             <!-- Garis Waktu -->
-            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-300 via-emerald-400 to-green-500"></div>
-            <div class="md:hidden absolute left-8 top-0 w-1 h-full bg-gradient-to-b from-green-300 via-emerald-400 to-green-500"></div>
-            
+            <div
+              class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-300 via-emerald-400 to-green-500"
+            ></div>
+            <div
+              class="md:hidden absolute left-8 top-0 w-1 h-full bg-gradient-to-b from-green-300 via-emerald-400 to-green-500"
+            ></div>
+
             <div class="space-y-12 md:space-y-16">
               <!-- 1974 -->
-              <div class="relative" x-data="{ show: false }" x-intersect="show = true">
+              <div
+                class="relative"
+                x-data="{ show: false }"
+                x-intersect="show = true"
+              >
                 <div class="md:flex items-center justify-between">
                   <div class="hidden md:block w-5/12 text-right pr-8">
-                    <div class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl" 
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700"
-                         x-transition:enter-start="opacity-0 -translate-x-20 scale-50"
-                         x-transition:enter-end="opacity-100 translate-x-0 scale-100">
+                    <div
+                      class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700"
+                      x-transition:enter-start="opacity-0 -translate-x-20 scale-50"
+                      x-transition:enter-end="opacity-100 translate-x-0 scale-100"
+                    >
                       1974
                     </div>
                   </div>
-                  <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-green-600 rounded-full border-4 border-white shadow-lg z-10"
-                       x-show="show"
-                       x-transition:enter="transition ease-out duration-500 delay-300"
-                       x-transition:enter-start="opacity-0 scale-0"
-                       x-transition:enter-end="opacity-100 scale-100"></div>
+                  <div
+                    class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-green-600 rounded-full border-4 border-white shadow-lg z-10"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-300"
+                    x-transition:enter-start="opacity-0 scale-0"
+                    x-transition:enter-end="opacity-100 scale-100"
+                  ></div>
                   <div class="md:w-5/12 md:pl-8 ml-16 md:ml-0">
                     <div class="md:hidden mb-3">
-                      <span class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">1974</span>
+                      <span
+                        class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg"
+                        >1974</span
+                      >
                     </div>
-                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-green-600 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700 delay-200"
-                         x-transition:enter-start="opacity-0 translate-x-20"
-                         x-transition:enter-end="opacity-100 translate-x-0">
-                      <h4 class="font-bold text-xl md:text-2xl text-green-800 mb-3">Awal Berdiri</h4>
-                      <p class="text-gray-700 leading-relaxed">Tempat kursus bahasa Arab Nahu Sorof dan kitab kuning didirikan di Belendung (Batu Ceper) oleh Alm. KH. Asnawi Mukhtar.</p>
+                    <div
+                      class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-green-600 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700 delay-200"
+                      x-transition:enter-start="opacity-0 translate-x-20"
+                      x-transition:enter-end="opacity-100 translate-x-0"
+                    >
+                      <h4
+                        class="font-bold text-xl md:text-2xl text-green-800 mb-3"
+                      >
+                        Awal Berdiri
+                      </h4>
+                      <p class="text-gray-700 leading-relaxed">
+                        Tempat kursus bahasa Arab Nahu Sorof dan kitab kuning
+                        didirikan di Belendung (Batu Ceper) oleh Alm. KH. Asnawi
+                        Mukhtar.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- 1984 -->
-              <div class="relative" x-data="{ show: false }" x-intersect="show = true">
+              <div
+                class="relative"
+                x-data="{ show: false }"
+                x-intersect="show = true"
+              >
                 <div class="md:flex items-center justify-between">
                   <div class="md:w-5/12 text-right pr-8 ml-16 md:ml-0">
                     <div class="md:hidden mb-3 text-left">
-                      <span class="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">1984</span>
+                      <span
+                        class="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg"
+                        >1984</span
+                      >
                     </div>
-                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-r-4 border-emerald-600 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 text-left md:text-right"
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700 delay-200"
-                         x-transition:enter-start="opacity-0 -translate-x-20"
-                         x-transition:enter-end="opacity-100 translate-x-0">
-                      <h4 class="font-bold text-xl md:text-2xl text-green-800 mb-3">Pendirian Sekolah</h4>
-                      <p class="text-gray-700 leading-relaxed">MA Tarbiyah resmi berdiri sebagai salah satu sekolah Aliyah Islamiyah pertama di Kel. Belendung, Kec. Benda, Kota Tangerang.</p>
+                    <div
+                      class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-r-4 border-emerald-600 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 text-left md:text-right"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700 delay-200"
+                      x-transition:enter-start="opacity-0 -translate-x-20"
+                      x-transition:enter-end="opacity-100 translate-x-0"
+                    >
+                      <h4
+                        class="font-bold text-xl md:text-2xl text-green-800 mb-3"
+                      >
+                        Pendirian Sekolah
+                      </h4>
+                      <p class="text-gray-700 leading-relaxed">
+                        MA Tarbiyah resmi berdiri sebagai salah satu sekolah
+                        Aliyah Islamiyah pertama di Kel. Belendung, Kec. Benda,
+                        Kota Tangerang.
+                      </p>
                     </div>
                   </div>
-                  <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-emerald-600 rounded-full border-4 border-white shadow-lg z-10"
-                       x-show="show"
-                       x-transition:enter="transition ease-out duration-500 delay-300"
-                       x-transition:enter-start="opacity-0 scale-0"
-                       x-transition:enter-end="opacity-100 scale-100"></div>
+                  <div
+                    class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-emerald-600 rounded-full border-4 border-white shadow-lg z-10"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-300"
+                    x-transition:enter-start="opacity-0 scale-0"
+                    x-transition:enter-end="opacity-100 scale-100"
+                  ></div>
                   <div class="hidden md:block w-5/12 pl-8">
-                    <div class="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl"
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700"
-                         x-transition:enter-start="opacity-0 translate-x-20 scale-50"
-                         x-transition:enter-end="opacity-100 translate-x-0 scale-100">
+                    <div
+                      class="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700"
+                      x-transition:enter-start="opacity-0 translate-x-20 scale-50"
+                      x-transition:enter-end="opacity-100 translate-x-0 scale-100"
+                    >
                       1984
                     </div>
                   </div>
@@ -210,35 +377,59 @@
               </div>
 
               <!-- Sekarang -->
-              <div class="relative" x-data="{ show: false }" x-intersect="show = true">
+              <div
+                class="relative"
+                x-data="{ show: false }"
+                x-intersect="show = true"
+              >
                 <div class="md:flex items-center justify-between">
                   <div class="hidden md:block w-5/12 text-right pr-8">
-                    <div class="inline-block bg-gradient-to-r from-green-700 to-emerald-700 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl" 
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700"
-                         x-transition:enter-start="opacity-0 -translate-x-20 scale-50"
-                         x-transition:enter-end="opacity-100 translate-x-0 scale-100">
+                    <div
+                      class="inline-block bg-gradient-to-r from-green-700 to-emerald-700 text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700"
+                      x-transition:enter-start="opacity-0 -translate-x-20 scale-50"
+                      x-transition:enter-end="opacity-100 translate-x-0 scale-100"
+                    >
                       Sekarang
                     </div>
                   </div>
-                  <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-green-700 rounded-full border-4 border-white shadow-lg z-10"
-                       x-show="show"
-                       x-transition:enter="transition ease-out duration-500 delay-300"
-                       x-transition:enter-start="opacity-0 scale-0"
-                       x-transition:enter-end="opacity-100 scale-100">
-                    <div class="absolute inset-0 rounded-full bg-green-700 animate-ping opacity-75"></div>
+                  <div
+                    class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 md:w-10 md:h-10 bg-green-700 rounded-full border-4 border-white shadow-lg z-10"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-300"
+                    x-transition:enter-start="opacity-0 scale-0"
+                    x-transition:enter-end="opacity-100 scale-100"
+                  >
+                    <div
+                      class="absolute inset-0 rounded-full bg-green-700 animate-ping opacity-75"
+                    ></div>
                   </div>
                   <div class="md:w-5/12 md:pl-8 ml-16 md:ml-0">
                     <div class="md:hidden mb-3">
-                      <span class="inline-block bg-gradient-to-r from-green-700 to-emerald-700 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">Sekarang</span>
+                      <span
+                        class="inline-block bg-gradient-to-r from-green-700 to-emerald-700 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg"
+                        >Sekarang</span
+                      >
                     </div>
-                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-green-700 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
-                         x-show="show" 
-                         x-transition:enter="transition ease-out duration-700 delay-200"
-                         x-transition:enter-start="opacity-0 translate-x-20"
-                         x-transition:enter-end="opacity-100 translate-x-0">
-                      <h4 class="font-bold text-xl md:text-2xl text-green-800 mb-3">Perkembangan Modern</h4>
-                      <p class="text-gray-700 leading-relaxed">Menerapkan kurikulum pemerintah dan metode pembelajaran tahfidz Qur'an, kitab kuning, serta tilawah Qur'an. Berkomitmen mencetak generasi berakhlakul karimah sesuai motto Kota Tangerang.</p>
+                    <div
+                      class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-green-700 transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+                      x-show="show"
+                      x-transition:enter="transition ease-out duration-700 delay-200"
+                      x-transition:enter-start="opacity-0 translate-x-20"
+                      x-transition:enter-end="opacity-100 translate-x-0"
+                    >
+                      <h4
+                        class="font-bold text-xl md:text-2xl text-green-800 mb-3"
+                      >
+                        Perkembangan Modern
+                      </h4>
+                      <p class="text-gray-700 leading-relaxed">
+                        Menerapkan kurikulum pemerintah dan metode pembelajaran
+                        tahfidz Qur'an, kitab kuning, serta tilawah Qur'an.
+                        Berkomitmen mencetak generasi berakhlakul karimah sesuai
+                        motto Kota Tangerang.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -248,23 +439,44 @@
 
           <!-- Kotak Deskripsi -->
           <div class="mt-16" x-data="{ show: false }" x-intersect="show = true">
-            <div class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white p-8 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700"
-                 x-transition:enter-start="opacity-0 translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
+            <div
+              class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white p-8 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               <div class="flex items-start">
                 <div class="flex-shrink-0 mr-6">
-                  <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  <div
+                    class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      ></path>
                     </svg>
                   </div>
                 </div>
                 <div>
                   <h3 class="text-2xl font-bold mb-4">Tentang MA Tarbiyah</h3>
                   <p class="text-lg leading-relaxed text-green-50">
-                    MA Tarbiyah adalah sekolah yang pertama kali ada di Belendung atau Ceper, yang terletak di Kel. Belendung Kec. Benda yang dulu lebih dikenal dengan Batu Ceper Kota Tangerang. Dari masa ke masa, MA Tarbiyah terus berkomitmen untuk mendidik peserta didik agar mengerti dan memahami secara mendalam ilmu agama serta mampu menjadi pribadi yang mempunyai nilai-nilai norma sesuai dengan motto Kota Tangerang yaitu Akhlakul Karimah.
+                    MA Tarbiyah adalah sekolah yang pertama kali ada di
+                    Belendung atau Ceper, yang terletak di Kel. Belendung Kec.
+                    Benda yang dulu lebih dikenal dengan Batu Ceper Kota
+                    Tangerang. Dari masa ke masa, MA Tarbiyah terus berkomitmen
+                    untuk mendidik peserta didik agar mengerti dan memahami
+                    secara mendalam ilmu agama serta mampu menjadi pribadi yang
+                    mempunyai nilai-nilai norma sesuai dengan motto Kota
+                    Tangerang yaitu Akhlakul Karimah.
                   </p>
                 </div>
               </div>
@@ -274,118 +486,183 @@
       </section>
 
       <!-- 3. Struktur Organisasi -->
-      <section id="struktur-organisasi" class="py-16 md:py-20 bg-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-96 h-96 bg-green-100 rounded-full -ml-48 -mt-48 opacity-30"></div>
-        <div class="absolute bottom-0 right-0 w-64 h-64 bg-emerald-100 rounded-full -mr-32 -mb-32 opacity-50"></div>
-        
+      <section
+        id="struktur-organisasi"
+        class="py-16 md:py-20 bg-white relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 w-96 h-96 bg-green-100 rounded-full -ml-48 -mt-48 opacity-30"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-64 h-64 bg-emerald-100 rounded-full -mr-32 -mb-32 opacity-50"
+        ></div>
+
         <div class="container mx-auto px-4 relative z-10">
-          <div class="text-center mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-16"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Struktur Organisasi
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4 text-lg">Tim kepemimpinan yang solid dan berpengalaman</p>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
+            <p class="text-gray-600 mt-4 text-lg">
+              Tim kepemimpinan yang solid dan berpengalaman
+            </p>
           </div>
-          
-          <div class="flex flex-col items-center space-y-8" x-data="{ show: false }" x-intersect="show = true">
-            
-            <div x-show="show"
-                 x-transition:enter="transition ease-out duration-700"
-                 x-transition:enter-start="opacity-0 -translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="bg-gradient-to-r from-green-700 to-emerald-700 text-white px-8 py-5 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+
+          <div
+            class="flex flex-col items-center space-y-8"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <div
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 -translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="bg-gradient-to-r from-green-700 to-emerald-700 text-white px-8 py-5 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
                 <p class="font-bold text-xl mb-1">Ketua Yayasan</p>
                 <p class="text-green-100">H. Baijuri, P.dI</p>
               </div>
             </div>
 
-            <div class="w-0.5 h-12 bg-gradient-to-b from-green-400 to-emerald-500"></div>
+            <div
+              class="w-0.5 h-12 bg-gradient-to-b from-green-400 to-emerald-500"
+            ></div>
 
             <div class="w-full max-w-5xl">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
-                <div class="order-2 md:order-1"
-                     x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-100"
-                     x-transition:enter-start="opacity-0 -translate-x-20"
-                     x-transition:enter-end="opacity-100 translate-x-0">
-                  <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300 hover:border-green-400">
-                    <p class="font-bold text-lg text-green-800 mb-1">Kepala Tata Usaha</p>
+              <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center"
+              >
+                <div
+                  class="order-2 md:order-1"
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-100"
+                  x-transition:enter-start="opacity-0 -translate-x-20"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                >
+                  <div
+                    class="bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300 hover:border-green-400"
+                  >
+                    <p class="font-bold text-lg text-green-800 mb-1">
+                      Kepala Tata Usaha
+                    </p>
                     <p class="text-gray-600">Siti Sulaiha, S.Pd</p>
                   </div>
                 </div>
 
-                <div class="order-1 md:order-2"
-                     x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-200"
-                     x-transition:enter-start="opacity-0 -translate-y-10 scale-95"
-                     x-transition:enter-end="opacity-100 translate-y-0 scale-100">
-                  <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-6 rounded-2xl shadow-2xl transform md:scale-110 hover:scale-115 transition-all duration-300">
+                <div
+                  class="order-1 md:order-2"
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-200"
+                  x-transition:enter-start="opacity-0 -translate-y-10 scale-95"
+                  x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                >
+                  <div
+                    class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-6 rounded-2xl shadow-2xl transform md:scale-110 hover:scale-115 transition-all duration-300"
+                  >
                     <p class="font-bold text-2xl mb-1">Kepala Madrasah</p>
                     <p class="text-green-100">Kurnaen, S.Pd</p>
                   </div>
                 </div>
 
-                <div class="order-3"
-                     x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-100"
-                     x-transition:enter-start="opacity-0 translate-x-20"
-                     x-transition:enter-end="opacity-100 translate-x-0">
-                  <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300 hover:border-green-400">
-                    <p class="font-bold text-lg text-green-800 mb-1">Komite Sekolah</p>
+                <div
+                  class="order-3"
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-100"
+                  x-transition:enter-start="opacity-0 translate-x-20"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                >
+                  <div
+                    class="bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300 hover:border-green-400"
+                  >
+                    <p class="font-bold text-lg text-green-800 mb-1">
+                      Komite Sekolah
+                    </p>
                     <p class="text-gray-600">H. Taufik Rachman, SE, M.Pd</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="w-0.5 h-12 bg-gradient-to-b from-emerald-400 to-green-500"></div>
+            <div
+              class="w-0.5 h-12 bg-gradient-to-b from-emerald-400 to-green-500"
+            ></div>
 
             <div class="w-full max-w-6xl">
-              <h3 class="text-3xl font-bold text-green-800 mb-8 text-center"
-                  x-show="show"
-                  x-transition:enter="transition ease-out duration-700 delay-300"
-                  x-transition:enter-start="opacity-0"
-                  x-transition:enter-end="opacity-100">
+              <h3
+                class="text-3xl font-bold text-green-800 mb-8 text-center"
+                x-show="show"
+                x-transition:enter="transition ease-out duration-700 delay-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+              >
                 Wakil Kepala Madrasah
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-400"
-                     x-transition:enter-start="opacity-0 translate-y-10"
-                     x-transition:enter-end="opacity-100 translate-y-0">
-                  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-400"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                >
+                  <div
+                    class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
                     <div class="mb-4">
-                      <p class="font-bold text-lg text-green-800 mb-1">Wakamad Kurikulum</p>
+                      <p class="font-bold text-lg text-green-800 mb-1">
+                        Wakamad Kurikulum
+                      </p>
                       <p class="text-gray-600">Siti Khoirunnisa, S.Pd</p>
                     </div>
                     <div class="border-t border-gray-200 pt-4">
-                      <div class="bg-emerald-50 text-emerald-900 p-3 rounded-lg font-semibold text-sm">
+                      <div
+                        class="bg-emerald-50 text-emerald-900 p-3 rounded-lg font-semibold text-sm"
+                      >
                         Wali Kelas
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-500"
-                     x-transition:enter-start="opacity-0 translate-y-10"
-                     x-transition:enter-end="opacity-100 translate-y-0">
-                  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-500"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                >
+                  <div
+                    class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
                     <div class="mb-4">
-                      <p class="font-bold text-lg text-green-800 mb-1">Wakamad Kesiswaan</p>
+                      <p class="font-bold text-lg text-green-800 mb-1">
+                        Wakamad Kesiswaan
+                      </p>
                       <p class="text-gray-600">Lia Amalia, S.Pd</p>
                     </div>
                     <div class="border-t border-gray-200 pt-4 space-y-2">
-                      <div class="bg-emerald-50 text-emerald-900 p-3 rounded-lg text-sm">
+                      <div
+                        class="bg-emerald-50 text-emerald-900 p-3 rounded-lg text-sm"
+                      >
                         <p class="font-semibold">Pembina Hipti</p>
                         <p class="text-xs mt-1">Nurul 'Aisyah, S.Pd</p>
                       </div>
-                      <div class="bg-emerald-50 text-emerald-900 p-3 rounded-lg text-sm">
+                      <div
+                        class="bg-emerald-50 text-emerald-900 p-3 rounded-lg text-sm"
+                      >
                         <p class="font-semibold">Pembina Ekstrakurikuler</p>
                         <p class="text-xs mt-1">Isfan Fajar Aulia, S.Pd</p>
                       </div>
@@ -393,37 +670,55 @@
                   </div>
                 </div>
 
-                <div x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-600"
-                     x-transition:enter-start="opacity-0 translate-y-10"
-                     x-transition:enter-end="opacity-100 translate-y-0">
-                  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-600"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                >
+                  <div
+                    class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
                     <div>
-                      <p class="font-bold text-lg text-green-800 mb-1">Wakamad Sarana & Prasarana</p>
+                      <p class="font-bold text-lg text-green-800 mb-1">
+                        Wakamad Sarana & Prasarana
+                      </p>
                       <p class="text-gray-600">Ahmad Nur Fadilah, S.Kom</p>
                     </div>
                   </div>
                 </div>
 
-                <div x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-700"
-                     x-transition:enter-start="opacity-0 translate-y-10"
-                     x-transition:enter-end="opacity-100 translate-y-0">
-                  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-700"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                >
+                  <div
+                    class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
                     <div>
-                      <p class="font-bold text-lg text-green-800 mb-1">Wakamad Humas</p>
+                      <p class="font-bold text-lg text-green-800 mb-1">
+                        Wakamad Humas
+                      </p>
                       <p class="text-gray-600">Ikh, S.Pd</p>
                     </div>
                   </div>
                 </div>
 
-                <div x-show="show"
-                     x-transition:enter="transition ease-out duration-700 delay-800"
-                     x-transition:enter-start="opacity-0 translate-y-10"
-                     x-transition:enter-end="opacity-100 translate-y-0">
-                  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                  x-show="show"
+                  x-transition:enter="transition ease-out duration-700 delay-800"
+                  x-transition:enter-start="opacity-0 translate-y-10"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                >
+                  <div
+                    class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
                     <div>
-                      <p class="font-bold text-lg text-green-800 mb-1">Wakamad BP</p>
+                      <p class="font-bold text-lg text-green-800 mb-1">
+                        Wakamad BP
+                      </p>
                       <p class="text-gray-600">Siti Nurul Masitoh, S.PdI</p>
                     </div>
                   </div>
@@ -433,44 +728,74 @@
           </div>
         </div>
       </section>
-      
+
       <!-- Sambutan Kepala Madrasah -->
-      <section id="kepala-madrasah" class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-green-50">
+      <section
+        id="kepala-madrasah"
+        class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-green-50"
+      >
         <div class="container mx-auto px-4 max-w-4xl">
-          <div class="text-center mb-12" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-12"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Pimpinan Madrasah
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4 text-lg">Sambutan dari Kepala MA Tarbiyah Islamiyah</p>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
+            <p class="text-gray-600 mt-4 text-lg">
+              Sambutan dari Kepala MA Tarbiyah Islamiyah
+            </p>
           </div>
-      
-          <div class="flex justify-center" x-data="{ show: false }" x-intersect="show = true">
-            <div class="group bg-gradient-to-br from-green-50 via-white to-emerald-50 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-8 md:flex md:items-center md:gap-8 max-w-2xl border border-green-100"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700 delay-200"
-                 x-transition:enter-start="opacity-0 scale-95"
-                 x-transition:enter-end="opacity-100 scale-100">
-              
+
+          <div
+            class="flex justify-center"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <div
+              class="group bg-gradient-to-br from-green-50 via-white to-emerald-50 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-8 md:flex md:items-center md:gap-8 max-w-2xl border border-green-100"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+            >
               <div class="flex-shrink-0 mb-6 md:mb-0">
                 <div class="relative w-40 h-40 mx-auto">
-                  <img src="/images/guru/guru1.jpg" alt="Kurnaen, S.Pd" class="w-full h-full rounded-full object-cover shadow-lg border-4 border-white">
-                  <div class="absolute inset-0 rounded-full border-4 border-green-500 transform group-hover:scale-110 transition-transform duration-500 opacity-50 animate-pulse"></div>
+                  <img
+                    src="/images/guru/guru1.jpg"
+                    alt="Kurnaen, S.Pd"
+                    class="w-full h-full rounded-full object-cover shadow-lg border-4 border-white"
+                  />
+                  <div
+                    class="absolute inset-0 rounded-full border-4 border-green-500 transform group-hover:scale-110 transition-transform duration-500 opacity-50 animate-pulse"
+                  ></div>
                 </div>
               </div>
-              
+
               <div class="text-center md:text-left">
                 <h3 class="text-2xl font-bold text-green-800">Kurnaen, S.Pd</h3>
-                <p class="text-emerald-600 font-semibold text-lg mb-4">Kepala Madrasah</p>
-                <blockquote class="text-gray-600 italic leading-relaxed border-l-4 border-green-200 pl-4">
-                  "Selamat datang di MA Tarbiyah. Kami berkomitmen untuk tidak hanya memberikan ilmu pengetahuan, tetapi juga menanamkan nilai-nilai akhlakul karimah untuk membentuk generasi yang cerdas, beriman, dan bertakwa."
+                <p class="text-emerald-600 font-semibold text-lg mb-4">
+                  Kepala Madrasah
+                </p>
+                <blockquote
+                  class="text-gray-600 italic leading-relaxed border-l-4 border-green-200 pl-4"
+                >
+                  "Selamat datang di MA Tarbiyah. Kami berkomitmen untuk tidak
+                  hanya memberikan ilmu pengetahuan, tetapi juga menanamkan
+                  nilai-nilai akhlakul karimah untuk membentuk generasi yang
+                  cerdas, beriman, dan bertakwa."
                 </blockquote>
               </div>
-      
             </div>
           </div>
         </div>
@@ -479,510 +804,1521 @@
       <!-- 4. Staf Pengajar -->
       <section id="staf-pengajar" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4 max-w-7xl">
-          <div class="text-center mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-16"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Staf Pengajar
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4 text-lg">Tenaga pendidik profesional dan berpengalaman</p>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
+            <p class="text-gray-600 mt-4 text-lg">
+              Tenaga pendidik profesional dan berpengalaman
+            </p>
           </div>
-          
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6" x-data="{ show: false }" x-intersect="show = true">
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru1.jpg" alt="Kurnaen, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru1.jpg"
+                    alt="Kurnaen, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Kurnaen, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Kurnaen, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-50" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru2.jpg" alt="Ust. Moch. Masri Annadawy" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-50"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru2.jpg"
+                    alt="Ust. Moch. Masri Annadawy"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Ust. Moch. Masri Annadawy</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Ust. Moch. Masri Annadawy
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-100" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru3.jpg" alt="Isfan Fajar Aulia, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-100"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru3.jpg"
+                    alt="Isfan Fajar Aulia, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Isfan Fajar Aulia, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Isfan Fajar Aulia, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-150" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru4.jpg" alt="Achmad Nur Fadilah, S.Kom" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-150"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru4.jpg"
+                    alt="Achmad Nur Fadilah, S.Kom"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Achmad Nur Fadilah, S.Kom</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Achmad Nur Fadilah, S.Kom
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-200" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru5.jpg" alt="Ahmad Dian Saputra, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-200"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru5.jpg"
+                    alt="Ahmad Dian Saputra, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Ahmad Dian Saputra, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Ahmad Dian Saputra, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-250" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru6.jpg" alt="Ust. Muh. Ali Syahroni, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-250"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru6.jpg"
+                    alt="Ust. Muh. Ali Syahroni, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Ust. Muh. Ali Syahroni, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Ust. Muh. Ali Syahroni, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-300" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru7.jpg" alt="Lia Amalia, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-300"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru7.jpg"
+                    alt="Lia Amalia, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Lia Amalia, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Lia Amalia, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-350" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru8.jpg" alt="Edy Hamdy, S.Pd.I" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-350"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru8.jpg"
+                    alt="Edy Hamdy, S.Pd.I"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Edy Hamdy, S.Pd.I</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Edy Hamdy, S.Pd.I
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-400" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru9.jpg" alt="Dian Mardianah, SS" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-400"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru9.jpg"
+                    alt="Dian Mardianah, SS"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Dian Mardianah, SS</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Dian Mardianah, SS
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-450" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru10.jpg" alt="Siti Khairunnisa, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-450"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru10.jpg"
+                    alt="Siti Khairunnisa, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Siti Khairunnisa, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Siti Khairunnisa, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru11.jpg" alt="Nurul Aisyah, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru11.jpg"
+                    alt="Nurul Aisyah, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Nurul Aisyah, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Nurul Aisyah, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru12.jpg" alt="Rara Naura Nadzifah, ST" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru12.jpg"
+                    alt="Rara Naura Nadzifah, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Rara Naura Nadzifah, ST</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Rara Naura Nadzifah, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru13.jpg" alt="Robiatul Asriah, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru13.jpg"
+                    alt="Robiatul Asyriah, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Robiatul Asriah, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Robiatul Asyriah, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru14.jpg" alt="Haikal Ale Gunawan, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru14.jpg"
+                    alt="Haikal Ale Gunawan, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Haikal Ale Gunawan, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Haikal Ale Gunawan, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru15.jpg" alt="Dedi Renaldi, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru15.jpg"
+                    alt="Dedi Renaldi, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Dedi Renaldi, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Dedi Renaldi, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru16.jpg" alt="Hilliyah, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru16.jpg"
+                    alt="Hilliyah, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Hilliyah, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Hilliyah, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru17.jpg" alt="Fadly Rosid, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru17.jpg"
+                    alt="Fadly Rosid, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Fadly Rosid, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Fadly Rosid, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru18.jpg" alt="Yuyun Yulia, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru18.jpg"
+                    alt="Yuyun Yulia, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Yuyun Yulia, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Yuyun Yulia, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru19.jpg" alt="Marwati, S.Ag" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru19.jpg"
+                    alt="Marwati, S.Ag"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Marwati, S.Ag</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Marwati, S.Ag
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru20.jpg" alt="Ikah, SE" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru20.jpg"
+                    alt="Ikah, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Ikah, SE</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Ikah, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru21.jpg" alt="Hj. Paiqoh, SS" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru21.jpg"
+                    alt="Hj. Paiqoh, SS"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Hj. Paiqoh, SS</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Hj. Paiqoh, SS
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru22.jpg" alt="Silvi Nurul Mashito, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru22.jpg"
+                    alt="Silvi Nurul Mashito, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Silvi Nurul Mashito, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Silvi Nurul Mashito, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru23.jpg" alt="Siti Sulaiha, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru23.jpg"
+                    alt="Siti Sulaiha, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Siti Sulaiha, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Siti Sulaiha, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru24.jpg" alt="Hj. Fikriah, S.Ag" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru24.jpg"
+                    alt="Hj. Fikriah, S.Ag"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Hj. Fikriah, S.Ag</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Hj. Fikriah, S.Ag
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
 
-            <div class="group" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
-              <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-                <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100">
-                  <img src="/images/guru/guru25.jpg" alt="Sofyan Aris Saputra, S.Pd" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="group"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500 delay-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
+              <div
+                class="relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                <div
+                  class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100"
+                >
+                  <img
+                    src="/images/guru/guru25.jpg"
+                    alt="Sofyan Aris Saputra, S.Pd"
+                    class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
                 <div class="p-4 text-center">
-                  <h3 class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2">Sofyan Aris Saputra, S.Pd</h3>
-                  <div class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <h3
+                    class="font-bold text-sm md:text-base text-green-800 group-hover:text-green-600 transition-colors line-clamp-2"
+                  >
+                    Sofyan Aris Saputra, S.Pd
+                  </h3>
+                  <div
+                    class="mt-2 h-0.5 w-8 bg-green-600 mx-auto transform scale-0 group-hover:scale-100 transition-transform duration-300"
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-  
+
       <!-- 5. Raihan Prestasi -->
-      <section id="raihan-prestasi" class="py-16 md:py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section
+        id="raihan-prestasi"
+        class="py-16 md:py-20 bg-gradient-to-br from-green-50 to-emerald-50"
+      >
         <div class="container mx-auto px-4 max-w-6xl">
-          <div class="text-center mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10"
-                x-transition:enter-end="opacity-100 translate-y-0">
+          <div
+            class="text-center mb-16"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <h2
+              class="text-4xl md:text-5xl font-bold text-green-800 mb-4"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               Raihan Prestasi
             </h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4 text-lg">Pencapaian membanggakan siswa-siswi MA Tarbiyah</p>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"
+            ></div>
+            <p class="text-gray-600 mt-4 text-lg">
+              Pencapaian membanggakan siswa-siswi MA Tarbiyah
+            </p>
           </div>
-          
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12" x-data="{ show: false }" x-intersect="show = true">
-            <div class="bg-gradient-to-br from-green-500 to-emerald-600 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700"
-                 x-transition:enter-start="opacity-0 translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
+            <div
+              class="bg-gradient-to-br from-green-500 to-emerald-600 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               <div class="text-4xl md:text-5xl font-bold mb-2">14</div>
-              <div class="text-sm md:text-base text-green-100">Total Prestasi</div>
+              <div class="text-sm md:text-base text-green-100">
+                Total Prestasi
+              </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700 delay-100"
-                 x-transition:enter-start="opacity-0 translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
+
+            <div
+              class="bg-gradient-to-br from-yellow-400 to-yellow-500 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700 delay-100"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               <div class="text-4xl md:text-5xl font-bold mb-2">6</div>
               <div class="text-sm md:text-base text-yellow-100">Juara 1</div>
             </div>
-            
-            <div class="bg-gradient-to-br from-gray-400 to-gray-500 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700 delay-200"
-                 x-transition:enter-start="opacity-0 translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
+
+            <div
+              class="bg-gradient-to-br from-gray-400 to-gray-500 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               <div class="text-4xl md:text-5xl font-bold mb-2">4</div>
               <div class="text-sm md:text-base text-gray-100">Juara 2</div>
             </div>
-            
-            <div class="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
-                 x-show="show"
-                 x-transition:enter="transition ease-out duration-700 delay-300"
-                 x-transition:enter-start="opacity-0 translate-y-10"
-                 x-transition:enter-end="opacity-100 translate-y-0">
+
+            <div
+              class="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-2xl shadow-xl text-white text-center transform transition-all duration-500 hover:scale-105"
+              x-show="show"
+              x-transition:enter="transition ease-out duration-700 delay-300"
+              x-transition:enter-start="opacity-0 translate-y-10"
+              x-transition:enter-end="opacity-100 translate-y-0"
+            >
               <div class="text-4xl md:text-5xl font-bold mb-2">2</div>
-              <div class="text-sm md:text-base text-purple-100">Tk. Nasional</div>
+              <div class="text-sm md:text-base text-purple-100">
+                Tk. Nasional
+              </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100" x-data="{ show: false }" x-intersect="show = true">
+          <div
+            class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
+            x-data="{ show: false }"
+            x-intersect="show = true"
+          >
             <div class="overflow-x-auto">
               <table class="w-full">
                 <thead>
-                  <tr class="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-                    <th class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base">No</th>
-                    <th class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base">Jenis Prestasi</th>
-                    <th class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base">Tingkat</th>
-                    <th class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base hidden sm:table-cell">Tahun</th>
-                    <th class="px-4 md:px-6 py-4 text-center font-bold text-sm md:text-base">Peringkat</th>
+                  <tr
+                    class="bg-gradient-to-r from-green-600 to-emerald-600 text-white"
+                  >
+                    <th
+                      class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base"
+                    >
+                      No
+                    </th>
+                    <th
+                      class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base"
+                    >
+                      Jenis Prestasi
+                    </th>
+                    <th
+                      class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base"
+                    >
+                      Tingkat
+                    </th>
+                    <th
+                      class="px-4 md:px-6 py-4 text-left font-bold text-sm md:text-base hidden sm:table-cell"
+                    >
+                      Tahun
+                    </th>
+                    <th
+                      class="px-4 md:px-6 py-4 text-center font-bold text-sm md:text-base"
+                    >
+                      Peringkat
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">1</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">MHQ 5 Juz</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kota Tangerang</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 1</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      MHQ 5 Juz
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kota Tangerang</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 1</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-50" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">2</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">MTQ UMT</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kota Tangerang</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 1</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-50"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      MTQ UMT
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kota Tangerang</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 1</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-100" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">3</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">MTQ antar MA</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Jakarta Barat</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 1</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-100"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      3
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      MTQ antar MA
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Jakarta Barat</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 1</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">4</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Pidato</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kota Tangerang</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 2</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-150"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      4
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Pidato
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kota Tangerang</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 2</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">5</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Pidato antar MA</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Jakarta Barat</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 1</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-200"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      5
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Pidato antar MA
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Jakarta Barat</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 1</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-250" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">6</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Puisi dan Karya Ilmiah</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Nasional</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Peserta</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-250"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      6
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Puisi dan Karya Ilmiah
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Nasional</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Peserta</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">7</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Sholawat</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kecamatan</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 1</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-300"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      7
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Sholawat
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kecamatan</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-yellow-400 text-yellow-900 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 1</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-350" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">8</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Stand Up Comedy</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">-</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 2</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-350"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      8
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Stand Up Comedy
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >-</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 2</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">9</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">PASKIBRA</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kecamatan</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Partisipasi</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-400"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      9
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      PASKIBRA
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kecamatan</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Partisipasi</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-450" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">10</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">MSQ</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kecamatan</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 2</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-450"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      10
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      MSQ
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kecamatan</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 2</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">11</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Pramuka Kalpataru</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Nasional</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">2018</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Peserta</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-500"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      11
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Pramuka Kalpataru
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Nasional</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      2018
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Peserta</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-550" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">12</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Marawis</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kecamatan</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Juara 2</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-550"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      12
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Marawis
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-amber-100 text-amber-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kecamatan</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-gray-300 text-gray-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Juara 2</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-600" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">13</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Olimpiade Ekonomi UIN Tangsel</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-emerald-100 text-emerald-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Kota & Provinsi</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">-</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Peserta</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-600"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      13
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Olimpiade Ekonomi UIN Tangsel
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Kota & Provinsi</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      -
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Peserta</span
+                      >
+                    </td>
                   </tr>
-                  <tr class="hover:bg-green-50 transition-colors duration-200" x-show="show" x-transition:enter="transition ease-out duration-500 delay-650" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base">14</td>
-                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base">Latihan Pengembangan Kepemimpinan KWARDA BANTEN</td>
-                    <td class="px-4 md:px-6 py-4"><span class="inline-block bg-emerald-100 text-emerald-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">Provinsi</span></td>
-                    <td class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell">2019</td>
-                    <td class="px-4 md:px-6 py-4 text-center"><span class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm">Peserta</span></td>
+                  <tr
+                    class="hover:bg-green-50 transition-colors duration-200"
+                    x-show="show"
+                    x-transition:enter="transition ease-out duration-500 delay-650"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                  >
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base"
+                    >
+                      14
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 font-semibold text-gray-800 text-sm md:text-base"
+                    >
+                      Latihan Pengembangan Kepemimpinan KWARDA BANTEN
+                    </td>
+                    <td class="px-4 md:px-6 py-4">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
+                        >Provinsi</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 md:px-6 py-4 text-gray-700 text-sm md:text-base hidden sm:table-cell"
+                    >
+                      2019
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center">
+                      <span
+                        class="inline-block bg-emerald-100 text-emerald-800 px-3 md:px-4 py-1 rounded-full font-bold text-xs md:text-sm"
+                        >Peserta</span
+                      >
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -990,7 +2326,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <%- include('../partials/footer') %>
@@ -1005,32 +2340,32 @@
             const offsetTop = element.offsetTop - 80; // 80px offset untuk fixed header
             window.scrollTo({
               top: offsetTop,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           }, 100);
         }
       }
-    
+
       // Handle hash pada saat halaman dimuat
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         if (window.location.hash) {
           // Disable smooth scroll sementara
-          document.documentElement.style.scrollBehavior = 'auto';
-          
+          document.documentElement.style.scrollBehavior = "auto";
+
           // Scroll ke posisi hash setelah delay untuk memastikan konten dimuat
           setTimeout(() => {
             scrollToSection(window.location.hash);
             // Re-enable smooth scroll
-            document.documentElement.style.scrollBehavior = 'smooth';
+            document.documentElement.style.scrollBehavior = "smooth";
           }, 300);
         }
       });
-    
+
       // Handle klik pada link hash (untuk navigasi dalam halaman yang sama)
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId !== '#' && document.querySelector(targetId)) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId !== "#" && document.querySelector(targetId)) {
             e.preventDefault();
             scrollToSection(targetId);
             // Update URL tanpa reload
@@ -1039,5 +2374,5 @@
         });
       });
     </script>
-</body>
+  </body>
 </html>

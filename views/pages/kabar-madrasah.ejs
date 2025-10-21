@@ -7,21 +7,33 @@
     <%- include('../partials/header') %>
     <main class="flex-grow">
       <!-- Hero Section -->
-      <section class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white py-20">
+      <section
+        class="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white py-20"
+      >
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div
+              class="flex flex-col md:flex-row items-center justify-center gap-8"
+            >
               <!-- Logo -->
               <div class="flex-shrink-0">
-                <img src="/images/beranda/logo.png" alt="Logo Madrasah" class="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl">
+                <img
+                  src="/images/beranda/logo.png"
+                  alt="Logo Madrasah"
+                  class="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
+                />
               </div>
               <!-- Text Content -->
               <div class="text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Kabar Madrasah</h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                  Kabar Madrasah
+                </h1>
                 <p class="text-lg md:text-xl text-green-100">
                   Aktivitas dan Kegiatan Madrasah Aliyah Tarbiyah Islamiyah
                 </p>
-                <div class="mt-6 h-1 w-24 bg-white mx-auto md:mx-0 rounded-full"></div>
+                <div
+                  class="mt-6 h-1 w-24 bg-white mx-auto md:mx-0 rounded-full"
+                ></div>
               </div>
             </div>
           </div>
@@ -33,22 +45,38 @@
         <div class="container mx-auto max-w-7xl">
           <!-- Card 1: Sholat Dhuha -->
           <div class="mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700"
-                 :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700"
+              :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+            >
               <div class="grid md:grid-cols-2 gap-0">
-                <div class="order-2 md:order-1 p-8 md:p-12 flex flex-col justify-center">
-                  <div class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4 w-fit">
+                <div
+                  class="order-2 md:order-1 p-8 md:p-12 flex flex-col justify-center"
+                >
+                  <div
+                    class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4 w-fit"
+                  >
                     Kegiatan Rutin
                   </div>
                   <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     Pembiasaan Sholat Dhuha
                   </h2>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    Memulai hari dengan keberkahan. Kami membiasakan seluruh siswa untuk melaksanakan Sholat Dhuha berjamaah setiap pagi. Kegiatan ini bukan sekadar rutinitas ibadah, tetapi menjadi sarana utama untuk melatih kedisiplinan, menanamkan ketenangan jiwa, dan memperkuat fondasi iman dan taqwa (IMTAQ). Kami percaya, karakter mulia berawal dari pembiasaan yang baik.
+                    Memulai hari dengan keberkahan. Kami membiasakan seluruh
+                    siswa untuk melaksanakan Sholat Dhuha berjamaah setiap pagi.
+                    Kegiatan ini bukan sekadar rutinitas ibadah, tetapi menjadi
+                    sarana utama untuk melatih kedisiplinan, menanamkan
+                    ketenangan jiwa, dan memperkuat fondasi iman dan taqwa
+                    (IMTAQ). Kami percaya, karakter mulia berawal dari
+                    pembiasaan yang baik.
                   </p>
                 </div>
                 <div class="order-1 md:order-2 h-64 md:h-auto">
-                  <img src="/images/kabar/duha.jpg" alt="Sholat Dhuha" class="w-full h-full object-cover">
+                  <img
+                    src="/images/kabar/duha.jpg"
+                    alt="Sholat Dhuha"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -56,21 +84,35 @@
 
           <!-- Card 2: Pramuka -->
           <div class="mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700 delay-150"
-                 :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700 delay-150"
+              :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+            >
               <div class="grid md:grid-cols-2 gap-0">
                 <div class="h-64 md:h-auto">
-                  <img src="/images/kabar/pramuka.jpg" alt="Pramuka" class="w-full h-full object-cover">
+                  <img
+                    src="/images/kabar/pramuka.jpg"
+                    alt="Pramuka"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
                 <div class="p-8 md:p-12 flex flex-col justify-center">
-                  <div class="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4 w-fit">
+                  <div
+                    class="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4 w-fit"
+                  >
                     Ekstrakurikuler Wajib
                   </div>
                   <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     Ekstrakurikuler Wajib Pramuka: Membentuk Pribadi Mandiri
                   </h2>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    Melalui Gerakan Pramuka, kami mendidik siswa menjadi generasi yang tangguh, mandiri, dan berjiwa kepemimpinan. Sebagai ekstrakurikuler wajib, Pramuka menjadi wadah untuk melatih keterampilan, kerja sama tim, cinta alam, dan menumbuhkan rasa nasionalisme. Siswa tidak hanya belajar teori, tetapi juga mengaplikasikannya dalam kegiatan yang seru dan menantang.
+                    Melalui Gerakan Pramuka, kami mendidik siswa menjadi
+                    generasi yang tangguh, mandiri, dan berjiwa kepemimpinan.
+                    Sebagai ekstrakurikuler wajib, Pramuka menjadi wadah untuk
+                    melatih keterampilan, kerja sama tim, cinta alam, dan
+                    menumbuhkan rasa nasionalisme. Siswa tidak hanya belajar
+                    teori, tetapi juga mengaplikasikannya dalam kegiatan yang
+                    seru dan menantang.
                   </p>
                 </div>
               </div>
@@ -79,46 +121,46 @@
 
           <!-- Card 3: Maulid Nabi -->
           <div class="mb-16" x-data="{ show: false }" x-intersect="show = true">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700 delay-300"
-                 :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-700 delay-300"
+              :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+            >
               <div class="grid md:grid-cols-2 gap-0">
-                <div class="order-2 md:order-1 p-8 md:p-12 flex flex-col justify-center">
-                  <div class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4 w-fit">
+                <div
+                  class="order-2 md:order-1 p-8 md:p-12 flex flex-col justify-center"
+                >
+                  <div
+                    class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4 w-fit"
+                  >
                     Hari Besar Islam
                   </div>
                   <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     Syiar Islam Melalui Peringatan Hari Besar
                   </h2>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    Kecintaan pada Rasulullah SAW kami tanamkan melalui Peringatan Hari Besar Islam, salah satunya adalah peringatan Maulid Nabi. Setiap tahun, madrasah menggelar kegiatan ini dengan khidmat, diisi dengan tausiyah, shalawat bersama, dan kegiatan sosial. Momen ini menjadi pengingat untuk meneladani akhlak mulia Nabi Muhammad SAW dan mempererat ukhuwah Islamiyah (persaudaraan) di antara seluruh warga madrasah.
+                    Kecintaan pada Rasulullah SAW kami tanamkan melalui
+                    Peringatan Hari Besar Islam, salah satunya adalah peringatan
+                    Maulid Nabi. Setiap tahun, madrasah menggelar kegiatan ini
+                    dengan khidmat, diisi dengan tausiyah, shalawat bersama, dan
+                    kegiatan sosial. Momen ini menjadi pengingat untuk
+                    meneladani akhlak mulia Nabi Muhammad SAW dan mempererat
+                    ukhuwah Islamiyah (persaudaraan) di antara seluruh warga
+                    madrasah.
                   </p>
                 </div>
                 <div class="order-1 md:order-2 h-64 md:h-auto">
-                  <img src="/images/kabar/maulid.jpg" alt="Maulid Nabi" class="w-full h-full object-cover">
+                  <img
+                    src="/images/kabar/maulid.jpg"
+                    alt="Maulid Nabi"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Call to Action Section -->
-      <section class="bg-gradient-to-r from-green-600 to-emerald-700 py-16 px-4">
-        <div class="container mx-auto max-w-4xl text-center">
-          <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
-            Bergabunglah Bersama Kami
-          </h3>
-          <p class="text-green-50 text-lg mb-8">
-            Jadilah bagian dari keluarga besar Madrasah Aliyah Tarbiyah Islamiyah dan raih prestasi gemilang bersama kami
-          </p>
-          <a href="#" class="inline-block bg-white text-green-700 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition-colors duration-300 shadow-lg">
-            Hubungi Kami
-          </a>
-        </div>
-      </section>
     </main>
     <%- include('../partials/footer') %>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </body>
 </html>
