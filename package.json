@@ -17,7 +17,8 @@
   "scripts": {
     "start": "node server.js",
     "watch-css": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
-    "dev": "concurrently \"npm run watch-css\" \"npm run start\""
+    "dev": "concurrently \"npm run watch-css\" \"npm run start\"",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --minify"
   },
   "keywords": [],
   "author": "",
